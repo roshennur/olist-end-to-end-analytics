@@ -1,0 +1,826 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='olist_order_reviews_dataset' inline='true' name='federated.0uvj9rz0sqz4j9123dxp716m3d1b' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='olist_order_reviews_dataset' name='textscan.0tt18g81voh70x11ao4fc19xwdaw'>
+            <connection class='textscan' directory='C:/Users/roshe/OneDrive/Desktop/Olist_Project/dataset' filename='olist_order_reviews_dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[olist_orders_dataset.csv].[order_id]' />
+              <expression op='[olist_order_reviews_dataset.csv1].[order_id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0tt18g81voh70x11ao4fc19xwdaw' name='olist_orders_dataset.csv' table='[olist_orders_dataset#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='order_id' ordinal='0' />
+              <column datatype='string' name='customer_id' ordinal='1' />
+              <column datatype='string' name='order_status' ordinal='2' />
+              <column datatype='datetime' name='order_purchase_timestamp' ordinal='3' />
+              <column datatype='datetime' name='order_approved_at' ordinal='4' />
+              <column datatype='datetime' name='order_delivered_carrier_date' ordinal='5' />
+              <column datatype='datetime' name='order_delivered_customer_date' ordinal='6' />
+              <column datatype='datetime' name='order_estimated_delivery_date' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0tt18g81voh70x11ao4fc19xwdaw' name='olist_order_reviews_dataset.csv1' table='[olist_order_reviews_dataset#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=',' text-qualifier='&quot;'>
+              <column datatype='string' name='review_id' ordinal='0' />
+              <column datatype='string' name='order_id' ordinal='1' />
+              <column datatype='integer' name='review_score' ordinal='2' />
+              <column datatype='string' name='review_comment_title' ordinal='3' />
+              <column datatype='string' name='review_comment_message' ordinal='4' />
+              <column datatype='datetime' name='review_creation_date' ordinal='5' />
+              <column datatype='datetime' name='review_answer_timestamp' ordinal='6' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[customer_id]' value='[olist_orders_dataset.csv].[customer_id]' />
+          <map key='[order_approved_at]' value='[olist_orders_dataset.csv].[order_approved_at]' />
+          <map key='[order_delivered_carrier_date]' value='[olist_orders_dataset.csv].[order_delivered_carrier_date]' />
+          <map key='[order_delivered_customer_date]' value='[olist_orders_dataset.csv].[order_delivered_customer_date]' />
+          <map key='[order_estimated_delivery_date]' value='[olist_orders_dataset.csv].[order_estimated_delivery_date]' />
+          <map key='[order_id (olist_order_reviews_dataset.csv1)]' value='[olist_order_reviews_dataset.csv1].[order_id]' />
+          <map key='[order_id]' value='[olist_orders_dataset.csv].[order_id]' />
+          <map key='[order_purchase_timestamp]' value='[olist_orders_dataset.csv].[order_purchase_timestamp]' />
+          <map key='[order_status]' value='[olist_orders_dataset.csv].[order_status]' />
+          <map key='[review_answer_timestamp]' value='[olist_order_reviews_dataset.csv1].[review_answer_timestamp]' />
+          <map key='[review_comment_message]' value='[olist_order_reviews_dataset.csv1].[review_comment_message]' />
+          <map key='[review_comment_title]' value='[olist_order_reviews_dataset.csv1].[review_comment_title]' />
+          <map key='[review_creation_date]' value='[olist_order_reviews_dataset.csv1].[review_creation_date]' />
+          <map key='[review_id]' value='[olist_order_reviews_dataset.csv1].[review_id]' />
+          <map key='[review_score]' value='[olist_order_reviews_dataset.csv1].[review_score]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;\&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_id]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_id]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>customer_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_status]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_purchase_timestamp</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[order_purchase_timestamp]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_purchase_timestamp</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_approved_at</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[order_approved_at]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_approved_at</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_delivered_carrier_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[order_delivered_carrier_date]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_delivered_carrier_date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_delivered_customer_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[order_delivered_customer_date]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_delivered_customer_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_estimated_delivery_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[order_estimated_delivery_date]</local-name>
+            <parent-name>[olist_orders_dataset.csv]</parent-name>
+            <remote-alias>order_estimated_delivery_date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[review_id]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>review_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_id (olist_order_reviews_dataset.csv1)]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_score]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>review_score</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_comment_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[review_comment_title]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>review_comment_title</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_comment_message</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[review_comment_message]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>review_comment_message</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_creation_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[review_creation_date]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>review_creation_date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_answer_timestamp</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[review_answer_timestamp]</local-name>
+            <parent-name>[olist_order_reviews_dataset.csv1]</parent-name>
+            <remote-alias>review_answer_timestamp</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Delivery status' datatype='string' name='[Calculation_1143545090105344]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [order_delivered_customer_date] &gt; [order_estimated_delivery_date]&#13;&#10;THEN &quot;Late&quot;&#13;&#10;ELSE &quot;On-Time&quot;&#13;&#10;END' />
+      </column>
+      <column caption='olist_orders_dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]' role='measure' type='quantitative' />
+      <column caption='Order Delivered Customer Date' datatype='datetime' name='[order_delivered_customer_date]' role='dimension' type='ordinal' />
+      <column caption='Order Estimated Delivery Date' datatype='datetime' name='[order_estimated_delivery_date]' role='dimension' type='ordinal' />
+      <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+      <column caption='Order Status' datatype='string' name='[order_status]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[review_score]' role='measure' type='ordinal' />
+      <column-instance column='[Calculation_1143545090105344]' derivation='None' name='[none:Calculation_1143545090105344:nk]' pivot='key' type='nominal' />
+      <column-instance column='[order_delivered_customer_date]' derivation='None' name='[none:order_delivered_customer_date:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/roshe/AppData/Local/Temp/TableauTemp/#TableauTemp_0vuzxsi0hw4kr114vv1g40bwrugx.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/07/2026 05:59:45 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[customer_id]' value='[Extract].[customer_id]' />
+            <map key='[order_approved_at]' value='[Extract].[order_approved_at]' />
+            <map key='[order_delivered_carrier_date]' value='[Extract].[order_delivered_carrier_date]' />
+            <map key='[order_delivered_customer_date]' value='[Extract].[order_delivered_customer_date]' />
+            <map key='[order_estimated_delivery_date]' value='[Extract].[order_estimated_delivery_date]' />
+            <map key='[order_id (olist_order_reviews_dataset.csv1)]' value='[Extract].[order_id]' />
+            <map key='[order_id]' value='[Extract].[order_id1]' />
+            <map key='[order_purchase_timestamp]' value='[Extract].[order_purchase_timestamp]' />
+            <map key='[order_status]' value='[Extract].[order_status]' />
+            <map key='[review_answer_timestamp]' value='[Extract].[review_answer_timestamp]' />
+            <map key='[review_comment_message]' value='[Extract].[review_comment_message]' />
+            <map key='[review_comment_title]' value='[Extract].[review_comment_title]' />
+            <map key='[review_creation_date]' value='[Extract].[review_creation_date]' />
+            <map key='[review_id]' value='[Extract].[review_id]' />
+            <map key='[review_score]' value='[Extract].[review_score]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>order_id1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[order_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_id1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>99224</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>customer_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[customer_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customer_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>99224</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[order_status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_status</remote-alias>
+              <ordinal>2</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_purchase_timestamp</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[order_purchase_timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_purchase_timestamp</remote-alias>
+              <ordinal>3</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>99224</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_approved_at</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[order_approved_at]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_approved_at</remote-alias>
+              <ordinal>4</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>78505</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_delivered_carrier_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[order_delivered_carrier_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_delivered_carrier_date</remote-alias>
+              <ordinal>5</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>72422</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_delivered_customer_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[order_delivered_customer_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_delivered_customer_date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>92831</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_estimated_delivery_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[order_estimated_delivery_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_estimated_delivery_date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>olist_orders_dataset.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1194</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[review_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>94046</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>order_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[order_id (olist_order_reviews_dataset.csv1)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>order_id</remote-alias>
+              <ordinal>9</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>99224</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_score</remote-alias>
+              <ordinal>10</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_comment_title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[review_comment_title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_comment_title</remote-alias>
+              <ordinal>11</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2118</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_comment_message</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[review_comment_message]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_comment_message</remote-alias>
+              <ordinal>12</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24572</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_creation_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[review_creation_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_creation_date</remote-alias>
+              <ordinal>13</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1434</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_answer_timestamp</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[review_answer_timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_answer_timestamp</remote-alias>
+              <ordinal>14</ordinal>
+              <family>olist_order_reviews_dataset.csv1</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>94046</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_1143545090105344:nk]' type='palette'>
+            <map to='#308344'>
+              <bucket>&quot;On-Time&quot;</bucket>
+            </map>
+            <map to='#ae123a'>
+              <bucket>&quot;Late&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='order_id' />
+        <field-sort-custom-order field='customer_id' />
+        <field-sort-custom-order field='order_status' />
+        <field-sort-custom-order field='order_purchase_timestamp' />
+        <field-sort-custom-order field='order_approved_at' />
+        <field-sort-custom-order field='order_delivered_carrier_date' />
+        <field-sort-custom-order field='order_delivered_customer_date' />
+        <field-sort-custom-order field='Calculation_1143545090105344' />
+        <field-sort-custom-order field='order_estimated_delivery_date' />
+        <field-sort-custom-order field='review_id (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='order_id (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='review_score (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='review_comment_title (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='review_comment_message (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='review_creation_date (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='review_answer_timestamp (olist_order_reviews_dataset.csv1)' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <filter class='quantitative' column='[none:order_delivered_customer_date:qk]' filter-group='2' included-values='non-null' />
+      <filter class='categorical' column='[order_status]' filter-group='2'>
+        <groupfilter function='member' level='[order_status]' member='&quot;delivered&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+      <object-graph>
+        <objects>
+          <object caption='olist_orders_dataset.csv' id='olist_orders_dataset.csv_71E30F1421AA4192A61C2AE99C0394E5'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[olist_orders_dataset.csv].[order_id]' />
+                    <expression op='[olist_order_reviews_dataset.csv1].[order_id]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0tt18g81voh70x11ao4fc19xwdaw' name='olist_orders_dataset.csv' table='[olist_orders_dataset#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='order_id' ordinal='0' />
+                    <column datatype='string' name='customer_id' ordinal='1' />
+                    <column datatype='string' name='order_status' ordinal='2' />
+                    <column datatype='datetime' name='order_purchase_timestamp' ordinal='3' />
+                    <column datatype='datetime' name='order_approved_at' ordinal='4' />
+                    <column datatype='datetime' name='order_delivered_carrier_date' ordinal='5' />
+                    <column datatype='datetime' name='order_delivered_customer_date' ordinal='6' />
+                    <column datatype='datetime' name='order_estimated_delivery_date' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.0tt18g81voh70x11ao4fc19xwdaw' name='olist_order_reviews_dataset.csv1' table='[olist_order_reviews_dataset#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=',' text-qualifier='&quot;'>
+                    <column datatype='string' name='review_id' ordinal='0' />
+                    <column datatype='string' name='order_id' ordinal='1' />
+                    <column datatype='integer' name='review_score' ordinal='2' />
+                    <column datatype='string' name='review_comment_title' ordinal='3' />
+                    <column datatype='string' name='review_comment_message' ordinal='4' />
+                    <column datatype='datetime' name='review_creation_date' ordinal='5' />
+                    <column datatype='datetime' name='review_answer_timestamp' ordinal='6' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Review Score Distribution by Delivery Status'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#7f0000' fontname='Tableau Bold' fontsize='16'>                                                                          ⬤ Late</run>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='16'>Æ  </run>
+            <run fontcolor='#005500' fontname='Tableau Bold' fontsize='16'>⬤ On-Time/Early</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='olist_order_reviews_dataset' name='federated.0uvj9rz0sqz4j9123dxp716m3d1b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0uvj9rz0sqz4j9123dxp716m3d1b'>
+            <column caption='Delivery status' datatype='string' name='[Calculation_1143545090105344]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [order_delivered_customer_date] &gt; [order_estimated_delivery_date]&#13;&#10;THEN &quot;Late&quot;&#13;&#10;ELSE &quot;On-Time&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[order_id]' derivation='Count' name='[cnt:order_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1143545090105344]' derivation='None' name='[none:Calculation_1143545090105344:nk]' pivot='key' type='nominal' />
+            <column-instance column='[review_score]' derivation='None' name='[none:review_score:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Delivered Customer Date' datatype='datetime' name='[order_delivered_customer_date]' role='dimension' type='ordinal' />
+            <column caption='Order Estimated Delivery Date' datatype='datetime' name='[order_estimated_delivery_date]' role='dimension' type='ordinal' />
+            <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[review_score]' role='measure' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[cnt:order_id:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[cnt:order_id:qk]' value='n#,##0;-#,##0' />
+            <format attr='width' field='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:Calculation_1143545090105344:nk]' value='88' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:Calculation_1143545090105344:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:Calculation_1143545090105344:nk]' />
+              <text column='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[cnt:order_id:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='10' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-family' value='Tableau Bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.4942541122436523' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[cnt:order_id:qk]</rows>
+        <cols>([federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:review_score:ok] / [federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:Calculation_1143545090105344:nk])</cols>
+      </table>
+      <simple-id uuid='{FCF012D6-7083-49E9-AD3F-45740AB88DB2}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Review Score Distribution by Delivery Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:Calculation_1143545090105344:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:Calculation_1143545090105344:nk]</field>
+            <field>[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:order_id:nk]</field>
+            <field>[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[none:review_score (olist_order_reviews_dataset.csv1):ok]</field>
+            <field>[federated.0uvj9rz0sqz4j9123dxp716m3d1b].[sum:review_score:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{725554EA-7AF1-4F78-A944-FB29AAC8220D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Review Score Distribution by Delivery Status' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
