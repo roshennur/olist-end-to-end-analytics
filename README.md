@@ -20,7 +20,7 @@
 </ul>
 <br>
 <p align="left">
-  <img src="img_logo_erd/erd_olist.png" alt="Olist ERD" width="1000" height="600"/>
+  <img src="img_logo_erd/erd_olist.png" alt="Olist ERD" width="1000" height="500"/>
 </p>
 <br>
 
@@ -126,3 +126,23 @@
   <li><strong>Improve Quality in Low-Rated Product Categories:</strong> Categories like Office Furniture (39%), Home Comfort (32%), and Audio (31%) show the highest share of poor ratings. Olist should audit product quality, packaging, and supplier reliability in these categories. Also should remove or flag consistently underperforming sellers/products.</li>
 </ul>
 <br>
+<h2>Tools & Stack used:</h2>
+<p>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white"/>
+</p>
+<h2>Data Source:</h2>
+<p>
+  <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce">
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
+  </a>
+</p>
+
+<p>Brazilian E-Commerce Public Dataset by Olist — 100k orders from 2016 to 2018 across multiple marketplaces in Brazil, including order status, price, payment, freight, customer location, product attributes, and customer reviews.</p>
+<h2>Author</h2>
+<p>
+  <a href="https://www.linkedin.com/in/roshen-nurnazarov-37238039a/">
+    <img src="https://img.shields.io/badge/Roshen_Nurnazarov-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+</p>
