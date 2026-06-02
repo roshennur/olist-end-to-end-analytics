@@ -1,10 +1,8 @@
-<table>
-  <tr>
-    <td><img src="img_logo_erd/logo.png" alt="Olist Logo" width="350"/></td>
-    <td><h1>Olist E-Commerce Analytics</h1></td>
-  </tr>
-</table>
-<br>
+<p align="center">
+  <img src="img_logo_erd/logo.png" alt="Olist Logo" width="450"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <h1 align="center">Olist E-Commerce Report</h1>
+</p>
 <br>
 
 <h2 align="center">Project Background</h2>
